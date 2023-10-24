@@ -3,7 +3,7 @@ We reviewed some existing training set optimization methods, and proposed some n
 
 ## Installation
 
-The EHPGS can be installed from GitHub:
+The TSODBG can be installed from GitHub:
 
 ``` r
 library(devtools)
