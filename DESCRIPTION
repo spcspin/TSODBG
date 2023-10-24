@@ -1,0 +1,13 @@
+Package: TSPDBG
+Type: Package
+Title: Training Set Optimization to Discover the Best Genotypes
+Version: 1.0
+Date: 2023-10-23
+Author: Szu-Ping, Chen; Wen-Hsiu Sung ;Chen-Tuo, Liao 
+Maintainer: Szu-Ping, Chen <r09621108@ntu.edu.tw>
+Description: We  reviewed some existing training set optimization methods, and proposed some new ones for training set optimization in genomic selection to discover the most favorable genotypes from a candidate population.
+License: GPL (>= 3)
+Depends:R (>= 3.5.0)
+RoxygenNote: 7.2.3
+Encoding: UTF-8
+LazyData: TRUE
