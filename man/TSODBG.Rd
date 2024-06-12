@@ -13,13 +13,14 @@ TSODBG(
   test = NULL,
   method = "rScore",
   min.iter = NULL,
+  max.iter = NULL,
   console = TRUE
 )
 }
 \arguments{
-\item{K}{A numeric matrix of kinship. (for D.opt, A.opt, CD, and MCD methods)}
+\item{K}{A numeric matrix of kinship. (for  GVoverall, GVaverage, CDmean(v2), and CDranking methods)}
 
-\item{geno}{A numeric matrix of marker-associated matrix (for rSocre, MSPE, and D.opt methods; rows: individuals; columns: PCs or markers).}
+\item{geno}{A numeric matrix of marker-associated matrix or principal components (for rSocre and MSPE methods; rows: individuals; columns: PCs or markers).}
 
 \item{cand}{An integer vector of which individuals are candidates of the training set.}
 
@@ -33,6 +34,8 @@ TSODBG(
 
 \item{min.iter}{Minimum iteration.}
 
+\item{max.iter}{Maximum iteration.}
+
 \item{console}{Whether the function will print out the iteration numbers (deafult: TRUE).}
 }
 \value{
@@ -43,6 +46,6 @@ This function is designed for discover the best genotypes.
 }
 \examples{
 data(PC)
-TSODBG(geno=PC[,1:50], cand = 1:328, n.train = 50)
+TSODBG(geno=PC[,1:50], cand = 1:328, n.train = 50, min.iter = 50)
 
 }

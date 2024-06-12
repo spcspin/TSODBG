@@ -14,13 +14,14 @@ GA(
   criteria = r_score,
   greater = TRUE,
   min.iter = NULL,
+  max.iter = NULL,
   console = TRUE
 )
 }
 \arguments{
-\item{K}{A numeric matrix of kinship. (for D.opt method)}
+\item{K}{A numeric matrix of kinship. (for GVoverall and CDmean(v2) method)}
 
-\item{geno}{A numeric matrix of marker-associated matrix (for rSocre, MSPE, and D.opt methods; rows: individuals; columns: PCs or markers).}
+\item{geno}{A numeric matrix of marker-associated matrix or principal components (for rSocre and MSPE methods; rows: individuals; columns: PCs or markers).}
 
 \item{cand}{An integer vector of which individuals are candidates of the training set.}
 
@@ -36,6 +37,8 @@ GA(
 
 \item{min.iter}{Minimum iteration.}
 
+\item{max.iter}{Maximum iteration.}
+
 \item{console}{Whether the function will print out the iteration numbers (deafult: TRUE).}
 }
 \value{
@@ -46,6 +49,6 @@ This function is designed to perform genetic algorithm modified form Ou and Liao
 }
 \examples{
 data(PC)
-GA(geno=PC[,1:50], cand = 1:328, n.train = 50)
+GA(geno=PC[,1:50], cand = 1:328, n.train = 50, min.iter = 50)
 
 }
