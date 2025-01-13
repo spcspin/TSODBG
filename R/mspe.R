@@ -23,5 +23,5 @@ mspe_score <- function(X,X0,lambda=1){
   X0A <- X0%*%A
   B <- sum(diag(X0A%*%t(X0A)))
   C <- sum(diag(t(X0IAX)%*%X0IAX))
-  return(1+1/n0r*B+C)
+  return(1+1/n0r*(B+C))
 }
